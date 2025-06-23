@@ -1,0 +1,15 @@
+[package]
+name = "rew-data"
+version = "0.1.0"
+edition = "2021"
+description = "Data management operations for Rew runtime"
+license = "MIT"
+
+[dependencies]
+deno_core = "0.347.0"
+anyhow = "1.0.96"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+tokio = { version = "1.43.0", features = ["fs"] }
+

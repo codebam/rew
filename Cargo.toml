@@ -1,3 +1,14 @@
+[workspace]
+members = [
+  "rew-fs",
+  "rew-data", 
+  "rew-os",
+  "rew-utils",
+  "rew-runtime",
+  "rew_bindgen_macros",
+  "rew_bindgen",
+]
+
 [package]
 name = "rew_runtime"
 version = "0.0.43"
@@ -21,6 +32,10 @@ name = "rew"
 path = "src/lib.rs"
 
 [dependencies]
+# Use the new runtime crate
+rew-runtime = { path = "rew-runtime" }
+
+# Keep existing dependencies for compatibility
 rand = "0.8"
 deno_core = "0.347.0"
 tokio = { version = "1.43.0", features = ["full"] }
